@@ -57,6 +57,18 @@ function send(method, params = {}) {
 await send('Page.enable');
 await send('Runtime.enable');
 await send('Log.enable');
+await send('Network.enable');
+await send('Network.setCacheDisabled', { cacheDisabled: true });
+try {
+  await send('Page.bringToFront');
+  await send('Emulation.setFocusEmulationEnabled', { enabled: true });
+} catch { /* ignore */ }
+try {
+  await send('Browser.grantPermissions', {
+    origin: new URL(url).origin,
+    permissions: ['clipboardReadWrite', 'clipboardSanitizedWrite'],
+  });
+} catch { /* 部分环境不支持，忽略 */ }
 await send('Emulation.setDeviceMetricsOverride', {
   width: Number(width),
   height: Number(height),
