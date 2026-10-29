@@ -1,5 +1,5 @@
 /* 买了啥 · 离线外壳缓存。数据在 IndexedDB 里，不经过网络。 */
-const CACHE = 'maile-sha-v2';
+const CACHE = 'maile-sha-v3';
 const ASSETS = [
   './',
   './index.html',
