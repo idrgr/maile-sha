@@ -599,7 +599,8 @@ a { color: var(--accent-deep); }
   margin-top: 18px; padding-top: 15px;
   border-top: 1px solid rgba(251, 246, 236, .12);
 }
-.profile-stats strong { display: block; font-size: 16px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.profile-stats strong { display: block; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.profile-stats div { min-width: 0; }
 .profile-stats span { display: block; margin-top: 3px; font-size: 10px; color: rgba(251, 246, 236, .5); }
 
 .menu-card {

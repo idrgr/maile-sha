@@ -531,7 +531,7 @@ function meHTML() {
       <div class="profile-stats">
         <div><strong>${o.count}</strong><span>总记录</span></div>
         <div><strong>¥${fmtAmount(o.total)}</strong><span>累计花费</span></div>
-        <div><strong style="font-size:13px">${esc(first)}</strong><span>最早记录</span></div>
+        <div><strong style="font-size:12px">${esc(first)}</strong><span>最早记录</span></div>
       </div>
     </section>
 
